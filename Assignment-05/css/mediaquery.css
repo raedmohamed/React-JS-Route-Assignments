@@ -1,0 +1,57 @@
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  nav .mode-icons {
+    padding-top: 4px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  nav .menu-icon {
+    display: block;
+  }
+  nav .main-links {
+    --inline-gap: 0px;
+    --block-gap: 15px;
+    transform: translateX(100%);
+    position: absolute;
+    z-index: 999;
+    width: 350px;
+    height: 100vh;
+    background-color: #fff;
+    border-left: 2px solid #f1f1f1;
+    right: 0;
+    top: 0;
+    /* bottom: 0 !important; */
+    flex-direction: column;
+    transition: transform 400ms;
+  }
+  nav .main-links .close-icon {
+    display: block;
+    padding: 10px 15px 5px;
+  }
+  nav .main-links a {
+    width: 100%;
+    padding: var(--block-gap) 10px;
+  }
+  footer .container :is(.about, .contact-details) {
+    width: calc(calc(100% - var(--gap)) / 2);
+    order: 1;
+  }
+  footer .container :is(.subscription) {
+    width: 100%;
+    order: 2;
+  }
+}

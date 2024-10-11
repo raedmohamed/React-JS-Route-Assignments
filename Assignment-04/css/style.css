@@ -156,11 +156,16 @@ a.active[href="#"],
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
 }
 
+.box:hover i {
+  transform: scale(1.2);
+}
+
 .box i {
   color: #ff305b;
   display: block;
   font-size: 36px;
   margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .box h3 {
