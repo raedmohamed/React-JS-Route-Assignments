@@ -147,7 +147,7 @@ nav .main-links .close-icon {
 /* ///////////////////////////// end of header */
 
 #hero {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: var(--color-light-grey);
   display: flex;
   align-items: center;
@@ -250,9 +250,6 @@ nav .main-links .close-icon {
 
 /* ///////////////////////////// end of hero section */
 
-#chefs {
-  height: 100vh;
-}
 .chefs-body {
   --gap: 1.875rem;
   padding-block: 1.25rem;
@@ -351,6 +348,7 @@ nav .main-links .close-icon {
 }
 
 .box img {
+  display: block;
   width: 100%;
   transition: transform var(--animation-duration);
 }
@@ -442,6 +440,7 @@ nav .main-links .close-icon {
 
 .row {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: var(--gap);
 }

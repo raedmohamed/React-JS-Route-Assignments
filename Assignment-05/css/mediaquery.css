@@ -9,7 +9,11 @@
     max-width: 1140px;
   }
 }
-
+@media screen and (min-width: 1200px) {
+  #hero {
+    min-height: 100vh;
+  }
+}
 @media screen and (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -53,5 +57,105 @@
   footer .container :is(.subscription) {
     width: 100%;
     order: 2;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+
+  #hero .container {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+  #hero .container > * {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .chefs-body {
+    justify-content: center;
+  }
+  .chefs-body .chefs-item {
+    width: calc(calc(100% - var(--gap)) / 2);
+  }
+  .gallery-body {
+    height: 1405px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    /* overflow: hidden; */
+  }
+  .gallery-body .box {
+    width: calc(50% - var(--gap));
+  }
+  .box:nth-child(1) {
+    order: -7;
+  }
+  .box:nth-child(5) {
+    order: -6;
+  }
+  .box:nth-child(2) {
+    order: -5;
+  }
+  .box:nth-child(4) {
+    order: -4;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  .gallery-body {
+    height: auto;
+  }
+  .gallery-body .box {
+    width: 100%;
+  }
+  .contact-body iframe {
+    aspect-ratio: 1/0.66;
+  }
+  .contact-body .details > div {
+    width: 100%;
+  }
+  .form-container .row {
+    flex-direction: column;
+  }
+  .form-container .row .input-container {
+    width: 100%;
+  }
+  footer .container :is(.about, .contact-details, .subscription) {
+    width: 100%;
+    order: 0;
+  }
+  .chefs-body .chefs-item {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .hero-content .btn-group {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    padding-inline: 15px;
+  }
+  footer .sunscription-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  :root {
+    font-size: 12px;
   }
 }
