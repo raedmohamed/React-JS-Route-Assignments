@@ -1,0 +1,141 @@
+:root {
+  /* ? ######## Colors */
+  --color-default: #212529;
+  --primary-hue: 0;
+  --primary-saturation: 84%;
+  --primary-lightness: 44%;
+  --color-primary: hsl(
+    var(--primary-hue),
+    var(--primary-saturation),
+    var(--primary-lightness)
+  );
+  --color-secondary: #37373f;
+  --color-tertiary: #7f7f90;
+  --light-hue: 0;
+  --light-saturation: 0%;
+  --light-lightness: 100%;
+  --color-light: hsl(
+    var(--light-hue),
+    var(--light-saturation),
+    var(--light-lightness)
+  );
+  --color-light-grey: #eee;
+  /* ? ######## Fonts */
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Amatic SC", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+  /* ? ######## Animation options */
+  --animation-duration: 400ms;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #fff;
+  border-left: 2px solid #eee;
+  box-shadow: 0px 0px 21px 0px #0003 inset;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #000;
+  box-shadow: 0px 0px 10px 0px #eeeeee8c inset;
+  border-radius: 100vh;
+}
+::selection {
+  background-color: hsl(
+    var(--primary-hue),
+    var(--primary-saturation),
+    var(--primary-lightness),
+    0.7
+  );
+  opacity: 0.2;
+  color: var(--color-light);
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+}
+body {
+  font-family: var(--font-default);
+  color: var(--color-default);
+  /* overflow-x: hidden; */
+}
+
+body:not(body:has(:target)) li a[href="#hero"],
+body:has(#hero:target) li a[href="#hero"],
+body:has(#contact:target) li a[href="#contact"],
+body:has(#gallery:target) li a[href="#gallery"],
+body:has(#chefs:target) li a[href="#chefs"] {
+  color: #000;
+}
+
+body:not(body:has(:target)) li a[href="#hero"]::before,
+body:has(#hero:target) li a[href="#hero"]::before,
+body:has(#contact:target) li a[href="#contact"]::before,
+body:has(#gallery:target) li a[href="#gallery"]::before,
+body:has(#chefs:target) li a[href="#chefs"]::before {
+  width: calc(100% - (var(--inline-gap) * 2));
+}
+
+:is(section) .container {
+  --margin-top: 3.125rem;
+  --margin-bottom: 3.125rem;
+}
+
+#contact .main-form :is(input, textarea) {
+  padding: 0.9375rem 0.9375rem;
+  font-family: inherit;
+  line-height: 1.5;
+  border: 2px solid hsl(0, calc(0% + 10%), calc(100% - 10%));
+  color: #212529;
+  transition: border-color var(--animation-duration);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 1.5625rem;
+}
+.heading h2 {
+  color: var(--color-tertiary);
+  font-weight: 400;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+.heading p {
+  font-size: 3.125rem;
+  font-family: var(--font-primary);
+}
+.heading span {
+  color: var(--color-primary);
+}
+
+footer .container :is(.about, .contact-details) {
+  width: calc(calc(100% - var(--gap) * 2) / 4);
+}
+footer .container :is(.subscription) {
+  width: calc(calc(100% - var(--gap) * 2) / 2);
+}
+
+body:has(#main-links:target) .main-nav .main-links {
+  transform: translateX(0%);
+}
+header:has(#main-links:target) {
+  height: 100%;
+  background-color: hsl(0, 0%, 100%, 0.7);
+}
