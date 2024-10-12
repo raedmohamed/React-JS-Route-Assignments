@@ -551,6 +551,10 @@ footer .quick-links ul li {
   transition: transform var(--animation-duration),
     background-color var(--animation-duration);
 }
+footer .quick-links ul li:hover {
+  transform: translateX(10px);
+  background-color: #222;
+}
 footer .quick-links ul li::before {
   content: "\f105";
   font: var(--fa-font-solid);
