@@ -1,0 +1,82 @@
+/* Small devices (sm) - screens greater than or equal to 576px */
+@media (min-width: 576px) {
+  .box-shadow {
+    padding: 3rem 1.25rem;
+  }
+}
+@media (max-width: 576px) {
+  #contact {
+    margin-top: 0;
+  }
+}
+
+/* Medium devices (md) - screens greater than or equal to 768px */
+@media (min-width: 768px) {
+  .card-blog {
+    margin-bottom: 3rem;
+  }
+  #hero h1 {
+    font-size: 4.5rem;
+  }
+  #hero h1 span {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  .box-shadow {
+    padding: 3rem;
+  }
+  .testimonial-box .description {
+    padding: 0 5rem;
+  }
+
+  .card-footer {
+    flex-wrap: wrap;
+    justify-content: center !important;
+  }
+  .post-box,
+  .form-comments,
+  .box-comments,
+  .widget-sidebar {
+    padding: 3rem;
+  }
+  .contact {
+    padding: 3rem !important;
+  }
+}
+
+/* Large devices (lg) - screens greater than or equal to 992px */
+@media (max-width: 992px) {
+  #deep-drop-links {
+    left: 25%;
+  }
+  .nested-deep-drop-down:hover #deep-drop-links {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@media (min-width: 992px) {
+  #deep-drop-links {
+    right: 96%;
+  }
+  .nested-deep-drop-down:hover #deep-drop-links {
+    opacity: 1;
+    visibility: visible;
+    right: 100%;
+  }
+
+  .drop-links {
+    display: block;
+  }
+
+  .testimonial-box .description {
+    padding: 0 8rem;
+  }
+}
+
+/* Extra large devices (xl) - screens greater than or equal to 1200px */
+@media (min-width: 1200px) {
+  .testimonial-box .description {
+    padding: 0 13rem;
+  }
+}
