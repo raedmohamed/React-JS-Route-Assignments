@@ -1,0 +1,93 @@
+body {
+  font-family: "Poppins", serif;
+  color: #343434;
+  font-weight: 400;
+}
+p {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 15px;
+  color: #748182;
+}
+span {
+  display: inline-block;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", serif;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-toggler {
+  border: none;
+  outline: none; /* To remove focus outline */
+}
+
+.main-nav {
+  padding: 20px 0 30px;
+  background: none;
+}
+.main-nav .navbar-brand {
+  font-family: "Montserrat", serif;
+  text-transform: uppercase;
+  padding-top: 20px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.main-nav .nav-item {
+  position: relative;
+  margin: 10px 20px 0;
+}
+.main-nav .nav-item .nav-link {
+  padding-inline: 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+.social-links span {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  font-size: 14px;
+  line-height: 35px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+/* Resuable Classes */
+
+.bg-setting {
+  background-size: cover !important;
+  background-position: 0px 0px !important;
+  background-attachment: fixed !important;
+}
+
+.section-head {
+  margin-bottom: 80px;
+  text-align: center;
+}
+.section-head h3 {
+  font-weight: 900;
+  font-size: 40px;
+  position: relative;
+  display: inline-block;
+  z-index: 4;
+}
+.mb-50 {
+  margin-bottom: 50px;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}

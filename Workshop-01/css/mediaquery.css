@@ -1,0 +1,33 @@
+@media screen and (min-width: 992px) {
+  .main-nav .nav-item .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    display: none;
+  }
+  .main-nav .nav-item .active::after {
+    display: inline;
+  }
+}
+@media screen and (max-width: 992px) {
+  .main-nav .navbar-nav {
+    background-color: #fff;
+  }
+  .main-nav .navbar-nav .nav-item {
+    text-align: center;
+    color: #000;
+  }
+  .main-nav .navbar-nav .nav-item .nav-link {
+    color: #000;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .cd-headline {
+    font-size: 4.4rem;
+    font-weight: 300;
+  }
+}
