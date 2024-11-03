@@ -273,11 +273,11 @@
 }
 
 .carousel-control-prev {
-  left: 15px;
+  left: 0;
 }
 
 .carousel-control-next {
-  right: 15px;
+  right: 0;
 }
 
 .carousel-control-prev-icon,
@@ -289,7 +289,7 @@
   content: "‹";
 }
 
-.carousel-control-next::after {
+.carousel-control-next::before {
   content: "›";
 }
 
@@ -317,6 +317,10 @@
 .modal-body img {
   max-height: 80vh;
   object-fit: contain;
+  padding: 0 !important;
+}
+.modal-body {
+  padding: 0 !important;
 }
 
 /* ///////////////////////////////////////////// end of portfolio */
