@@ -1,0 +1,13 @@
+body {
+  min-height: 100vh;
+  background: #767575;
+}
+
+.quotes h1 {
+  font-size: 80px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.quotes p {
+  font-size: 35px;
+  color: bisque;
+}
