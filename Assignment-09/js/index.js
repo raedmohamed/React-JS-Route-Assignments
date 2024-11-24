@@ -108,7 +108,7 @@ function validateSiteUrl() {
   } else {
     siteUrl.classList.add("is-invalid");
     siteUrl.classList.remove("is-valid");
-    error.classList.remove("d-none");
+
     return false;
   }
 }
@@ -122,17 +122,20 @@ function validateSiteName() {
   } else {
     siteName.classList.add("is-invalid");
     siteName.classList.remove("is-valid");
-    error.classList.remove("d-none");
     return false;
   }
 }
 
 function CheckInputs() {
-  if (!siteUrl.value || !siteName.value) {
+  let siteUrlValid = validateSiteUrl();
+  let siteNameValid = validateSiteName();
+
+  if (!siteUrlValid || !siteNameValid || !siteUrl.value || !siteName.value) {
     error.classList.remove("d-none");
+  } else {
+    error.classList.add("d-none");
   }
 }
-
 siteUrl.addEventListener("input", function () {
   validateSiteUrl();
 });
