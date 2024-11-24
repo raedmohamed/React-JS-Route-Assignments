@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/bookmark.png">
+  <!-- FontAwsome Link -->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <!-- Bootstrap CSS Link -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Pacifico&family=Righteous&display=swap"
+    rel="stylesheet">
+
+
+  <!-- Main Links -->
+
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Bookmark</title>
+</head>
+
+<body>
+
+
+  <section id="hero" class="py-5">
+    <div class="container">
+      <h1>Bookmarker</h1>
+      <div class="bookmark-body  mt-5 w-100 py-3">
+        <h2>
+          <i class="fa-solid fa-bookmark"></i>
+          Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <div class="site-name w-100 d-flex flex-column justify-content-center">
+          <label for="bookmarkName" class="pb-2 fw-semibold">
+            <i class="fa-solid fa-book-bookmark pe-2"></i>
+            Site Name</label>
+          <input type="text" placeholder="Bookmark Name" class="form-control" id="bookmarkName">
+        </div>
+        <div class="site-url w-100 d-flex flex-column justify-content-center">
+          <label for="bookmarkURL" class="pb-2 fw-semibold">
+            <i class="fa-solid fa-link pe-2"></i>Site URL</label>
+          <input type="url" placeholder="Website URL" class="form-control" id="bookmarkURL">
+        </div>
+        <button class="btn btn-submit px-5" id="submitBtn">Submit</button>
+
+      </div>
+
+      <table class="table mt-4 text-center bg-light">
+        <thead>
+          <tr>
+            <th class="text-capitalize">index</th>
+            <th class="text-capitalize">Website Name</th>
+            <th class="text-capitalize">Visit</th>
+            <th class="text-capitalize">Delete</th>
+          </tr>
+
+        </thead>
+        <tbody id="tableContent">
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+
+  <section class="alert-parent d-none">
+    <div class="alert">
+      <div class="alert-header">
+        <div class="circles-parent">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <button>
+          <span class="alert-icon">
+            <i class="fa-solid fa-xmark"></i>
+          </span>
+        </button>
+      </div>
+      <div class="alert-body">
+        <h2>Site Name or Url is not valid, Please follow the rules below :</h2>
+        <ul class="nested-messages">
+          <li>
+            <span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+            <p>
+              Site name must contain at least 3 characters
+            </p>
+          </li>
+          <li>
+            <span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+            <p>
+              Site URL must be a valid one
+            </p>
+          </li>
+          <li>
+            <span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+            <p>
+              Site name and URL must not be repeated.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
