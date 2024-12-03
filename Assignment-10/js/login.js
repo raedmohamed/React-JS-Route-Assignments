@@ -5,6 +5,15 @@ let errorMsg = document.querySelector(".empty-fields");
 document.forms[0].addEventListener("submit", function (e) {
   e.preventDefault();
 
+  errorMsg.innerText = "";
+  errorMsg.classList.remove("text-bg-success", "text-bg-danger");
+
+  if (inputEmail.value.trim() === "" || inputPassword.value.trim() === "") {
+    errorMsg.innerText = "Please fill in both email and password.";
+    errorMsg.classList.add("text-bg-danger");
+    return;
+  }
+
   let storedData = JSON.parse(localStorage.getItem("data")) || [];
 
   for (let i = 0; i < storedData.length; i++) {
@@ -13,7 +22,6 @@ document.forms[0].addEventListener("submit", function (e) {
     if (user.mail === inputEmail.value.trim()) {
       if (user.password === inputPassword.value) {
         localStorage.removeItem("username");
-
         localStorage.setItem("username", user.name);
 
         errorMsg.innerText = "Success";
@@ -23,9 +31,10 @@ document.forms[0].addEventListener("submit", function (e) {
           window.location.replace("./index.html");
         }, 1000);
 
-        break;
+        return;
       } else {
         errorMsg.innerText = "Incorrect email or password";
+        errorMsg.classList.add("text-bg-danger");
         break;
       }
     }
