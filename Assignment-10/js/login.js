@@ -15,28 +15,31 @@ document.forms[0].addEventListener("submit", function (e) {
   }
 
   let storedData = JSON.parse(localStorage.getItem("data")) || [];
+  let loginSuccess = false;
 
   for (let i = 0; i < storedData.length; i++) {
     let user = storedData[i];
 
-    if (user.mail === inputEmail.value.trim()) {
-      if (user.password === inputPassword.value) {
-        localStorage.removeItem("username");
-        localStorage.setItem("username", user.name);
+    if (
+      user.mail === inputEmail.value.trim() &&
+      user.password === inputPassword.value
+    ) {
+      localStorage.setItem("username", user.name);
 
-        errorMsg.innerText = "Success";
-        errorMsg.classList.add("text-bg-success");
+      errorMsg.innerText = "Success";
+      errorMsg.classList.add("text-bg-success");
 
-        setTimeout(function () {
-          window.location.replace("./index.html");
-        }, 1000);
+      setTimeout(function () {
+        window.location.replace("./index.html");
+      }, 1000);
 
-        return;
-      } else {
-        errorMsg.innerText = "Incorrect email or password";
-        errorMsg.classList.add("text-bg-danger");
-        break;
-      }
+      loginSuccess = true;
+      break;
     }
+  }
+
+  if (!loginSuccess) {
+    errorMsg.innerText = "Incorrect email or password";
+    errorMsg.classList.add("text-bg-danger");
   }
 });
