@@ -1,0 +1,66 @@
+.hero-section {
+  background-color: #24353f;
+}
+.hero-section .container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-section h1 {
+  font-size: 2.2rem;
+  color: #17a2b8;
+  text-align: center;
+  margin-bottom: 1.6rem;
+  text-transform: capitalize;
+}
+
+.hero-section form {
+  width: 60%;
+  padding: 3rem 2rem;
+  background-color: #24353f;
+  border-radius: 0;
+  border-color: transparent;
+  box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}
+.hero-section form input {
+  background-color: transparent;
+  border: 2px solid #ced4da;
+  color: #fff !important;
+  margin-bottom: 1rem;
+}
+.hero-section form input:focus {
+  background-color: transparent;
+  border-color: #80bdff;
+  box-shadow: none;
+}
+.hero-section form input::placeholder {
+  color: #ced4da;
+}
+.hero-section form p,
+.hero-section form .empty-fields {
+  color: #dc3545;
+  padding: 0 0.2rem;
+  margin-bottom: 1rem;
+}
+.hero-section form .empty-fields {
+  text-align: center;
+  margin-bottom: 0;
+}
+.hero-section form button:hover {
+  color: #fff;
+  background-color: #17a2b8;
+}
+.hero-section form p:last-child {
+  text-align: center;
+  margin-top: 1rem;
+  color: #fff;
+}
+.hero-section form p:last-child a {
+  text-decoration: none;
+  color: #fff;
+}
+.hero-section form p:last-child a:hover {
+  text-decoration: underline;
+}
+/* ///////////////////////////////////////////////////////////////// */
