@@ -2,7 +2,7 @@
   async function getWeather(city = "cairo") {
     try {
       const response = await fetch(
-        `http://api.weatherapi.com/v1/forecast.json?key=1545b6eeb3f34df4b9d10437240912&q=${city}&days=3`
+        `https://api.weatherapi.com/v1/forecast.json?key=1545b6eeb3f34df4b9d10437240912&q=${city}&days=3`
       );
 
       if (response.ok) {

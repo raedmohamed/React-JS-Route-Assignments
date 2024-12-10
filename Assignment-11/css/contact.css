@@ -19,7 +19,7 @@
 
 .contact-info .fixed-height {
   height: 220px;
-  background-color: transparent; /* Optional, to visually distinguish the section */
+  background-color: transparent;
 }
 
 .contact-item {
@@ -44,11 +44,11 @@
 form {
   width: 100% !important;
   margin-top: 0;
+  margin-bottom: 1rem;
 }
 textarea {
   height: auto;
-  min-height: 9.5rem !important; /* Ensures it always has enough space for two lines */
-  resize: none; /* Prevents resizing */
+  min-height: 9.5rem !important;
   background-color: transparent !important;
   color: #fff !important;
   border: none !important;
