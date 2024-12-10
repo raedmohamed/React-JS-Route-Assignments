@@ -1,0 +1,230 @@
+img {
+  max-width: 100%;
+}
+
+.navbar {
+  padding: 0.8rem 0;
+  background-color: #1e202b !important;
+}
+
+.navbar-collapse a {
+  color: #fff !important;
+  padding: 0.1rem 1.5rem !important;
+  border: 2px solid;
+  border-color: transparent;
+  border-radius: 29px;
+}
+.navbar-collapse a:hover {
+  border-color: #009ad8;
+
+  color: #009ad8 !important;
+}
+.navbar-nav {
+  gap: 0.4rem;
+}
+
+.navbar-nav .nav-link.active {
+  border: 2px solid #009ad8;
+  border-radius: 29px;
+  color: #009ad8 !important;
+}
+.navbar-brand img {
+  height: 50px;
+}
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.navbar-brand div img {
+  display: inline-block;
+  vertical-align: middle !important;
+}
+.navbar-brand div:first-child {
+  text-align: center;
+}
+.navbar-brand div {
+  color: #fff;
+}
+.navbar-brand div h1 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+.navbar-brand div p {
+  font-size: 0.7rem;
+  margin: 0;
+  color: #bfc1c8;
+}
+/*? End of the navbar ////////////////////////////////////////// */
+
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../images/weather-effects-composition.jpg) no-repeat center center/cover;
+}
+form {
+  background-color: transparent !important;
+  border: none !important;
+  width: 70% !important;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+form input {
+  background-color: #1e202b !important;
+  color: #fff !important;
+  padding: 0.8rem !important;
+  border: none !important;
+}
+
+form input::placeholder {
+  color: #bfc1c8 !important;
+}
+form button {
+  padding: 0.6rem 3rem !important;
+  right: 12px;
+  top: 9px;
+  background-color: #017fb1 !important;
+  color: #fff !important;
+  transition: all 0.3s;
+}
+form button:hover {
+  background-color: #08a7db !important;
+}
+
+.card {
+  background-color: #1e202b;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 !important;
+  height: 100%;
+}
+
+.weather-data {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.weather-data .top-card {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2d303d;
+  color: #bfc1c8;
+}
+.weather-data .middle-card {
+  padding: 1rem 2rem;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e202b;
+}
+.weather-data .middle-card span {
+  align-self: flex-start;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+.weather-data .middle-card h2 {
+  font-size: 3.5rem !important;
+  margin-bottom: 0.5rem;
+}
+.weather-data .middle-card h2 img {
+  width: 40px;
+}
+.weather-data .middle-card p {
+  color: #009ad8;
+}
+.related-info {
+  justify-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.related-info div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.related-info div span img {
+  margin-bottom: 5px;
+}
+
+footer {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  background-color: #1e202b;
+}
+
+footer form {
+  margin: 0;
+  width: 100% !important;
+  margin-bottom: 1rem;
+}
+footer form input {
+  background-color: #2d303d !important;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.social-media a {
+  text-decoration: none;
+}
+
+.social-media span {
+  color: #009ad8;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2d303d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-media span:hover {
+  background-color: #009ad8;
+  color: #fff;
+}
+
+footer p {
+  text-align: center;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+  form {
+    width: 100% !important;
+  }
+  .navbar-nav {
+    margin-top: 1rem !important;
+    text-align: center !important;
+  }
+  .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 16 16'%3e%3cpath d='M1 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  /* .container {
+    max-width: 850px !important;
+  } */
+
+  .related-info {
+    font-size: 1rem !important;
+    gap: 1rem !important;
+  }
+}

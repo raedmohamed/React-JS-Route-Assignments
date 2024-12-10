@@ -1,0 +1,85 @@
+.contact {
+  min-height: 100vh;
+  background-color: #1e202b;
+}
+
+.sec-nav {
+  background-color: #262936 !important;
+}
+.sec-nav {
+  font-size: 0.9rem !important;
+}
+.sec-nav a:hover {
+  text-decoration: underline !important;
+}
+.contact-info {
+  position: relative;
+  background-color: #262936;
+}
+
+.contact-info .fixed-height {
+  height: 220px;
+  background-color: transparent; /* Optional, to visually distinguish the section */
+}
+
+.contact-item {
+  gap: 0.5rem !important;
+}
+.contact-item > * {
+  color: #bfc1c8;
+}
+.contact-item div > * {
+  color: #bfc1c8 !important;
+}
+.contact-item i {
+  vertical-align: middle;
+  margin-top: 5px;
+  color: #13b8dc;
+}
+
+.two-contact-item {
+  gap: 1.5rem !important;
+}
+
+form {
+  width: 100% !important;
+  margin-top: 0;
+}
+textarea {
+  height: auto;
+  min-height: 9.5rem !important; /* Ensures it always has enough space for two lines */
+  resize: none; /* Prevents resizing */
+  background-color: transparent !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+textarea::placeholder {
+  color: #95979f !important;
+}
+
+.contact-form p {
+  color: #bfc1c8 !important;
+}
+
+input,
+textarea {
+  box-shadow: 0 0 0 0.1rem #95979f;
+}
+input:hover,
+textarea:hover {
+  box-shadow: 0 0 0 0.1rem #009ad8;
+}
+
+footer {
+  background-color: #262936;
+}
+footer input {
+  box-shadow: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .two-contact-item {
+    gap: 0.5rem !important;
+  }
+}
