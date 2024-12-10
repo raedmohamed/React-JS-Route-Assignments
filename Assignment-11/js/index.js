@@ -100,4 +100,11 @@
     const city = searchInput.value.trim();
     getWeather(city);
   });
+
+  const forms = document.querySelectorAll("form");
+  forms.forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault(); // Prevent the form from submitting/reloading
+    });
+  });
 })();
