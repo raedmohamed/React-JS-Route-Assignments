@@ -6,16 +6,12 @@ import { hero } from "./ui.module.js";
 export async function getGames(category = "mmorpg") {
   const options = {
     method: "GET",
-    headers: {
-      "x-rapidapi-key": "d7abf8732emsh824336a1d883953p15fc8djsn3f73a4675ade",
-      "x-rapidapi-host": "free-to-play-games-database.p.rapidapi.com",
-    },
   };
   hero.classList.add("d-none");
   loader.classList.replace("d-none", "d-flex");
   try {
     const api = await fetch(
-      `https://free-to-play-games-database.p.rapidapi.com/api/games?platform=browser&category=${category}&sort-by=release-date`,
+      `https://www.freetogame.com/api/games?platform=browser&category=${category}&sort-by=release-date`,
       options
     );
     const response = await api.json();
