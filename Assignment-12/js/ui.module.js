@@ -43,10 +43,11 @@ export function displayDetails(obj) {
   gameDetails.classList.remove("d-none");
 
   gameContainer.innerHTML = `
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="text-white">Details Game</h2>
+      <button class="close" id="close">&times;</button>
+    </div>
     <div class="row">
-      <div class="col-md- mb-4">
-        <h2>Details Game</h2>
-      </div>
       <div class="col-lg-4">
         <div class="mb-3">
           <img src="${obj.thumbnail}" class="w-100" alt="${obj.title}">
@@ -74,9 +75,10 @@ export function displayDetails(obj) {
     </div>
   `;
 
-  if (closeBtn) {
-    closeBtn.removeEventListener("click", closeDetails);
-    closeBtn.addEventListener("click", closeDetails);
+  const newCloseBtn = gameContainer.querySelector("#close");
+  if (newCloseBtn) {
+    newCloseBtn.removeEventListener("click", closeDetails);
+    newCloseBtn.addEventListener("click", closeDetails);
   }
 
   function closeDetails() {

@@ -160,23 +160,45 @@ nav .active {
   z-index: 1000;
 }
 
+.game-details .d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #343a40;
+  border-bottom: 1px solid #495057;
+}
+.game-details .d-flex h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+
+.game-details .close {
+  font-size: 2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.game-details .close:hover {
+  color: #ffc107;
+}
+
 .game-details img {
   width: 100%;
 }
 
-.game-details .close {
-  position: absolute;
-  top: -4px;
-  right: 5%;
-  font-size: 3.5rem;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
+.details-text {
+  margin-top: 20px;
 }
+
 .details-text div {
   margin-bottom: 1rem !important;
 }
+
 .details-text div span:nth-child(2) {
   padding: 0 0.4rem;
   background-color: #0dcaf0;
@@ -188,7 +210,9 @@ nav .active {
 
 .details-text a {
   border-color: #ffc107;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
+
 .details-text a:hover {
   background-color: #ffc107;
   border-color: #ffc107;
