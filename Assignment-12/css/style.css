@@ -166,8 +166,8 @@ nav .active {
 
 .game-details .close {
   position: absolute;
-  top: -5px;
-  right: 93px;
+  top: -4px;
+  right: 5%;
   font-size: 3.5rem;
   background: none;
   border: none;
